@@ -15,4 +15,4 @@ described in detail in arXiv:XXXX.XXXX. The parameters in this code are estimate
 COVID-19 spread in Germany.
 
 If you want to run the code, extract OpenOCL.zip in the same folder and run 'runMulti.m'.
-For any queries regarding the code please contact gangaprasath@seas.harvard.edu.
+For any queries regarding the code, please contact gangaprasath@seas.harvard.edu.
