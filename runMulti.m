@@ -11,7 +11,7 @@
 clear all; clc; close all; clear pathall;
 clear classes; clear java; clear functions;
 
-addpath('./OpenOCL'); % Path of OpenOCL package
+addpath('./OpenOCL/OpenOCL-master/'); % Path of OpenOCL package
 
 global Beta % Beta parameter in SIR model
 global Gamma % Recovery rate in SIR model
@@ -140,7 +140,7 @@ xlim(xlima)
 set(gca,'FontSize', AxthicksFnt);
 set(gcf,'color','w');
 title('Uncontrolled'); 
-legend('Young','Old')
+legend('$I_y/N$','$I_o/N$','Interpreter','latex')
 
 subplot(np,mp,2);
 plot(S(:,1)/Np,I(:,1)/Np,'LineWidth',2,'Color',reddish);hold on
@@ -162,13 +162,13 @@ xlabel('Time'); grid on
 set(gca,'XTickLabel',[]); grid on
 yyaxis right  
 plot(tFin,CostriFin,'k','MarkerSize',5,'LineWidth',1.5); hold on 
-stairs(tFin(1:end-1),uFin,'k','LineWidth',1.5)
+stairs(tFin(1:end-1),uFin/uM,'k','LineWidth',1.5)
 pbaspect([2 1 1]);
 xlim(xlima)
 ylim([0 1])
 set(gca,'FontSize', AxthicksFnt); grid on, box on
 title('Controlled'); 
-legend('Young','Old','Critical','u')
+legend('$I_y/N$','$I_o/N$','$I_C$','$u/u_M$','Interpreter','latex')
 plt = gca;
 plt.YAxis(1).Color = reddish;
 plt.YAxis(2).Color = 'k';
@@ -196,7 +196,7 @@ plot(tFin(1:end-1),GlifeND,'-.','LineWidth',1.5,'Color',blueish);hold on
 plot(tFin(1:end-1),GeconND,'LineWidth',1.5,'Color',blueish);
 plot(tFin(1:end-1),GsocND,'LineWidth',1.5,'Color',blueish); 
 yyaxis right 
-stairs(tFin(1:end-1),uFin,'k','LineWidth',1)
+stairs(tFin(1:end-1),uFin/uM,'k','LineWidth',1)
 set(gcf,'renderer','Painters')
 pbaspect([2 1 1]);
 xlabel('Time'); grid on
@@ -204,7 +204,7 @@ xlim(xlima)
 set(gca,'FontSize', AxthicksFnt);
 set(gcf,'color','w');
 title('Cost'); 
-legend('life','econ','soc','u')
+legend('$G_{\rm{life}}$','$G_{\rm{econ}}$','$G_{\rm{soc}}$','$u/u_M$','Interpreter','latex')
 plt = gca;
 plt.YAxis(1).Color = blueish;
 plt.YAxis(2).Color = 'k';
@@ -238,5 +238,3 @@ lifeLost
 daysLostCum
 
 TsaturHospDys
-
-
