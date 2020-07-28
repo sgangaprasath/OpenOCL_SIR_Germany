@@ -4,14 +4,14 @@ Optimal policies for mitigating pandemic costs
 
 Credits: S Ganga Prasath, Mattia Serra, Salem Mosleh, Vidya Raju
 
-Reference: arXiv:XXXX.XXXX
+Reference: arXiv:2007.11178
 
 
 OpenOCL ref: Koenemann, Jonas, et al. "OpenOCL–Open Optimal
 Control Library." (2017).
 
 This code contains optimal control of a two-age structured SIR model using OpenOCL,
-described in detail in arXiv:XXXX.XXXX. The parameters in this code are estimated from
+described in detail in arXiv:2007.11178. The parameters in this code are estimated from
 COVID-19 spread in Germany.
 
 For a simplified version of this, please use 1D_webpage.zip which is a one population
